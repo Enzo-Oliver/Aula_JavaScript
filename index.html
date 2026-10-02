@@ -57,26 +57,76 @@
         // } else {
         //     alert("O Primeiro numero nao é divisivel pelo segundo")
         // }
-
-        let nota1 = prompt("digite a primeira nota: ")
-        console.log(nota1)
-        let nota2 = prompt("digite a segunda nota: ")
-        console.log(nota2)
-        let nota3 = prompt("digite a terceira nota: ")
-        console.log(nota3)
-        let resultado = Number(nota1) + Number(nota2)+ Number(nota3)
-        resultadofinal = resultado / 3
-        console.log(resultadofinal)
         
-        if (resultadofinal >= 6){
-            alert("voce foi aprovado sua nota final foi " + resultadofinal+ "sua primeira nota foi" +nota1+ "sua segunda nota foi"+nota2+"sua terceira nota foi"+nota3)
-        }
-        else if(resultado <= 6){
-            alert("voce foi reprovado " + resultado + "Suas notas foram " +nota1+ "segunda "+nota2+"terceira "+nota3)
-        }
+        // let nota1 = prompt("digite a primeira nota: ")
+        // console.log(nota1)
+        // let nota2 = prompt("digite a segunda nota: ")
+        // console.log(nota2)
+        // let nota3 = prompt("digite a terceira nota: ")
+        // console.log(nota3)
+        // let resultado = Number(nota1) + Number(nota2)+ Number(nota3)
+        // resultadofinal = resultado / 3
+        // console.log(resultadofinal)
         
+        // if (resultadofinal >= 6){
+        //     alert("voce foi aprovado sua nota final foi " + resultadofinal+ "sua primeira nota foi" +nota1+ "sua segunda nota foi"+nota2+"sua terceira nota foi"+nota3)
+        // }
+        // else if(resultado <= 6){
+        //     alert("voce foi reprovado " + resultado + "Suas notas foram " +nota1+ "segunda "+nota2+"terceira "+nota3)
+        // }
+//----------------------------------------------------------------------------------------------------------------------------
+        // let aprovado = media >= 7;
+        // let recuperacao =media >= 6;
+        // aprovado?alert("Você está aprovado"):alert("Você está reprovado")
 
+        // aprovado?alert("Você está aprovado"):media>6?alert("Você está na recuperação"):alert("Você está reprovado")
+       
+        // aprovado?alert("Você está aprovado"):recuperacao?alert("Você está na recuperação"):alert("Você está reprovado")
 
+        // let nota1 = prompt("digite a primeira nota: ")
+        // let nota2 = prompt("digite a segunda nota: ")
+        // let nota3 = prompt("digite a terceira nota: ")
+        // let media = (nota1+nota2+nota3)/3
+        // alert("Sua média é "+media)
+
+        // media>7?status="aprovado":media>=6?status="recuperacao":status="reprovado"
+
+        // switch(status){
+        //     case "aprovado":
+        //         alert("Você está de aprovado")
+        //         break
+        //     case "recuperacao":
+        //         alert("Você está de recuperação")
+        //         break
+        //     case "reprovado":
+        //         alert("Você está reprovadi")
+        //         break
+        //     default:
+        //         alert("tendi nada")
+        //         break
+        // } 
+            // for ([inicialização]; [condição]; [expressão final])
+            // declaração
+                // for (var i = 0; i < 9; i++) {
+                // console.log(i);   
+                // }
+// ----------------------------------------------------------------------------------------
+// atividade - receber varias notas e fazer a media delas com o uso do for.
+//                 let totalNotas = Number(prompt("Quantas notas você quer digitar?"));
+//                 let soma = 0;
+
+//                 for (let i = 1; i <= totalNotas; i++) {
+//                 let nota = Number(prompt(`Digite a nota ${i}:`));
+//                 soma += nota;
+//                 }
+
+//                 let media = soma / totalNotas;
+//                 alert(`A média é: ${media.toFixed(2)}`);
+// ----------------------------------------------------------------------------------------
+//metodo do professor:
+let quantasnotas=Number(prompt("Quantas notas você quer digitar")), somadasnotas=0
+for (let i = 1; i <= quantasnotas; i++) somadasnotas+=Number(prompt("Qual a"+i+ " nota?"))
+alert("A média das "+quantasnotas+"é: "+somadasnotas/quantasnotas)
 
     </script>
 </body>
