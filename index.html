@@ -124,10 +124,72 @@
 //                 alert(`A média é: ${media.toFixed(2)}`);
 // ----------------------------------------------------------------------------------------
 //metodo do professor:
-let quantasnotas=Number(prompt("Quantas notas você quer digitar")), somadasnotas=0
-for (let i = 1; i <= quantasnotas; i++) somadasnotas+=Number(prompt("Qual a"+i+ " nota?"))
-alert("A média das "+quantasnotas+"é: "+somadasnotas/quantasnotas)
+// let quantasnotas=Number(prompt("Quantas notas você quer digitar?")), somadasnotas=0
+// for (let i = 1; i <= quantasnotas; i++) somadasnotas+=Number(prompt("Qual a "+i+ " nota?"))
+// alert("A média das "+quantasnotas+" é: "+somadasnotas/quantasnotas)
+// ----------------------------------------------------------------------------------------
 
+// function escrevernatela(texto){
+//     alert(texto)
+// }
+// function pedirnumero(){
+//     return Number(prompt("Me diga um número"))
+// }
+// // a = pedirnumero();
+// // alert(a)
+
+// a = ["Maça", "Banana", "Manga", "Laranja"]
+// alert(a[3])
+
+// ----------------------------------------------------------------------------------------
+// atividade - receber varias notas e fazer a media delas com o uso do function
+//metodo professor:
+//                 function calcularmedia(soma,qtd){
+//                     return soma/qtd
+//                 }
+//                 let quantasnotas=Number(prompt("Quantas notas você quer?"))
+//                 let somadasnotas=0
+//                 let notas = []
+//                 for (let index = 1; index <= quantasnotas; index++) {
+//                     notas[index-1] = Number(prompt("Qual a "+index+"ª nota?"))
+//                     somadasnotas+=notas[index-1]
+//                 }
+//                 alert("Suas notas foram: "+notas+" e sua média foi: "+calcularmedia(somadasnotas,quantasnotas))
+// // ----------------------------------------------------------------------------------------
+
+//                 function C_media(totalnotas) {
+//                 let soma = 0;
+
+//                 for (let i = 1; i <= totalnotas; i++) {
+//                     let nota = Number(prompt(`Digite a nota ${i}:`));
+//                     soma += nota;
+//                 }
+
+//                 return soma / totalnotas;
+//                 }
+
+//                 let total = Number(prompt("Quantas notas você quer digitar?"));
+//                 let media = C_media(total);
+//                 alert(`A média é: ${media.toFixed(2)}`);
+
+// ----------------------------------------------------------------------------------------
+//funcao de 1 a 7 e ele retorna um dia da semana 
+
+                function escreverdaidasemana(numero){
+                    if(numero > 7 || numero < 1) return "Dia Inválida"
+                    diasdasemana = [
+                        "segunda-feira",
+                        "terça-feira",
+                        "quarta-feira",
+                        "quinta-feira",
+                        "sexta-feira",
+                        "sabado",
+                        "domingo"
+                    ]
+                    return diasdasemana[numero-1];
+                    }
+                    alert(escreverdaidasemana(prompt("Qual dia você quer saber")))
+// ----------------------------------------------------------------------------------------
     </script>
 </body>
 </html>
