@@ -4,13 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .minha-caixa{
+            background-color: red;
+            min-width: 500px;
+            min-height: 500px;
+            padding-top: 10px;
+            
+        }
+        .item-lista{
+            background-color: aqua;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+    </style>
 </head>
 <body>
-    <div id="minha-caixa"></div>
-    <script>
-        let caixa = document.querySelector("#minha-caixa")
-        console.log(caixa)
-        caixa.textContent = "minha caixa"
-    </script>
+    <div class="minha-caixa">
+        <form action="#" method="post" id="meu-formulario">
+            <input type="text" name="titulo" id="titulo">
+            <button id="meubotao" type="submit">Adicionar Div</button>
+        </form>
+        <script>
+            let caixa = document.querySelector(".minha-caixa")
+            let botao = document.querySelector("#meubotao")
+            let inputtext = document.querySelector("#titulo")
+            botao.addEventListener("click", function (evento) {
+                // if(caixa.textContent == "Minha caixa") caixa.textContent = ""
+                // else caixa.textContent = "Minha caixa"
+                evento.preventDefault()
+                let minhadiv = document.createElement("div") // a div aparece no console
+                minhadiv.textContent = inputtext.value
+                minhadiv.classList.add("item-lista","outraclasse")
+                // minhadiv.classList.remove("outraclasse")
+                caixa.appendChild(minhadiv)
+                inputtext.value = ""
+                // document.body.insertBefore(minhadiv, caixa)
+                
+            })
+            console.log(caixa)
+            
+            </script>
+        </div>
 </body>
 </html>
+
