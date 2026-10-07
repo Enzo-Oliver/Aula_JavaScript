@@ -27,24 +27,102 @@
             <button id="meubotao" type="submit">Adicionar Div</button>
         </form>
         <script>
-            let caixa = document.querySelector(".minha-caixa")
-            let botao = document.querySelector("#meubotao")
-            let inputtext = document.querySelector("#titulo")
-            botao.addEventListener("click", function (evento) {
-                // if(caixa.textContent == "Minha caixa") caixa.textContent = ""
-                // else caixa.textContent = "Minha caixa"
-                evento.preventDefault()
-                let minhadiv = document.createElement("div") // a div aparece no console
-                minhadiv.textContent = inputtext.value
-                minhadiv.classList.add("item-lista","outraclasse")
-                // minhadiv.classList.remove("outraclasse")
-                caixa.appendChild(minhadiv)
-                inputtext.value = ""
-                // document.body.insertBefore(minhadiv, caixa)
+            // let caixa = document.querySelector(".minha-caixa")
+            // let botao = document.querySelector("#meubotao")
+            // let inputtext = document.querySelector("#titulo")
+            // botao.addEventListener("click", function (evento) {
+            //     // if(caixa.textContent == "Minha caixa") caixa.textContent = ""
+            //     // else caixa.textContent = "Minha caixa"
+            //     evento.preventDefault()
+            //     let minhadiv = document.createElement("div") // a div aparece no console
+            //     minhadiv.textContent = inputtext.value
+            //     minhadiv.classList.add("item-lista","outraclasse")
+            //     // minhadiv.classList.remove("outraclasse")
+            //     caixa.appendChild(minhadiv)
+            //     inputtext.value = ""
+            //     // document.body.insertBefore(minhadiv, caixa)
                 
-            })
-            console.log(caixa)
-            
+            // })
+            // console.log(caixa)
+
+            let anotacao = {                        // objeto
+                titulo: "minha anotação",
+                descricao: "descrição da minha anotação",
+                data: "07/10/2026",
+            }
+
+            // console.log(anotacao);
+            // alert(anotacao['data'])
+
+            console.log(anotacao);
+            alert(anotacao.data);
+
+            let livro_de_anotacoes = [              //array
+                {
+                    titulo: "Aula de segunda",
+                    descricao: "Reclamar do Enzo e lembrar de não passar perfume na sala",
+                    data: "08/10/2026",
+                    praco: 50
+                },
+                {
+                    titulo: "Aula de terca",
+                    descricao: "pegar carona pra ir tech summit",
+                    data: "09/10/2026",
+                    praco: 80
+                },
+                {
+                    titulo: "Aula de quarta",
+                    descricao: "pegar carona pra ir tech summit",
+                    data: "09/10/2026",
+                    praco: 130
+                },
+                {
+                    titulo: "Aula de quinta",
+                    descricao: "pegar carona pra ir tech summit",
+                    data: "09/10/2026",
+                    praco: 150
+                },
+            ]
+            console.log(livro_de_anotacoes[1].descricao);
+            livro_de_anotacoes[0].titulo = "Nova aula de amanhã"
+            console.log(livro_de_anotacoes);
+
+            let nova_anotacao = {
+                titulo: "Aula de terça-feira",
+                descricao: "Ainda nem sei o que vou ensinar",
+                data: "13/10/2026",
+            }
+            //livro_de_anotacoes[livro_de_anotacoes.length]=nova_anotacao
+            livro_de_anotacoes.push(nova_anotacao)
+            // livro_de_anotacoes.pop()
+            livro_de_anotacoes.length()
+
+            console.log(livro_de_anotacoes);
+
+            let minha_funcao = function imprimirTitulo(objeto){
+                console.log(objeto.titulo);
+            }
+
+            // for (let index = 0; index < livro_de_anotacoes.length; index++) {
+            //     minha_funcao(livro_de_anotacoes[index])
+            // }
+            livro_de_anotacoes.forEach(minha_funcao)
+
+            // let outra_funcao = function caros(objeto){
+            //     return objeto.preco > 50
+            // }
+            let outra_funcao = function caros(objeto){
+                return objeto.preco <= 50
+            }
+
+            console.log(livro_de_anotacoes.filter(outra_funcao));
+
+            // let mais_uma_funcao = function pagarmeia(anotacao){
+            //     return anotacao.preco/2
+            // }
+
+            console.log(livro_de_anotacoes.map(anotacao => anotacao.preco/2))
+
             </script>
         </div>
 </body>
